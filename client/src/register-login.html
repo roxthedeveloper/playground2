@@ -18,6 +18,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/app-route/app-location.html">
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="app-data.html">
+<link rel="import" href="log-out.html">
 
 <dom-module id="register-login">
   <template>
@@ -81,6 +82,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div id="authenticated" hidden$="[[!storedUser.loggedin]]">
         <h2>Hello, [[storedUser.name]]!</h2>
         <p>You are currently logged in. You can access <a href="/secret-quotes">Secret Quotes</a>!</p>
+        <log-out stored-user="{{storedUser}}"></log-out>
       </div>
     </div>
   </template>
